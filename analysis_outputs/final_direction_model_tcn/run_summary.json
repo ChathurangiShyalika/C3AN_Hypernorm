@@ -1,0 +1,132 @@
+{
+  "timestamp_utc": "2026-02-12T06:52:12.971801Z",
+  "output_dir": "/home/madhurthareja/itachicmd/hypernorm/analysis_outputs/final_direction_model_tcn",
+  "config": {
+    "horizons": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "n_lags": 30,
+    "price_col": "ohlc_avg",
+    "company_col": "company",
+    "date_col": "date",
+    "flat_threshold_pct": 0.1,
+    "test_size": 0.2,
+    "n_splits_cv": 5,
+    "balance_classes": true,
+    "use_technical_indicators": true,
+    "model_type": "tcn",
+    "rsi_period": 14,
+    "aggregate_daily": true,
+    "flat_threshold_strategy": "atr_sqrt",
+    "atr_threshold_multiplier": 0.5,
+    "atr_up_multiplier": 0.6,
+    "atr_down_multiplier": 0.5,
+    "ensemble_logistic_weight": 0.5,
+    "prediction_margin_threshold": 0.15,
+    "log_run_metadata": true,
+    "tcn_hidden_channels": 128,
+    "tcn_num_layers": 4,
+    "tcn_kernel_size": 5,
+    "tcn_dropout": 0.2,
+    "tcn_lr": 0.0005,
+    "tcn_batch_size": 128,
+    "tcn_max_epochs": 80,
+    "tcn_patience": 10,
+    "tcn_device": "cuda"
+  },
+  "metrics_summary": [
+    {
+      "horizon": 1,
+      "acc_test": 0.5231596393817012,
+      "f1_macro_test": 0.3725961300355061,
+      "acc_cv_mean": 0.40712658178229344,
+      "f1_macro_cv_mean": 0.3087150507627983
+    },
+    {
+      "horizon": 2,
+      "acc_test": 0.4822325832171327,
+      "f1_macro_test": 0.3532428941267506,
+      "acc_cv_mean": 0.35717713588159283,
+      "f1_macro_cv_mean": 0.273265175443128
+    },
+    {
+      "horizon": 3,
+      "acc_test": 0.44544091551504733,
+      "f1_macro_test": 0.33147017225487085,
+      "acc_cv_mean": 0.35225346407599595,
+      "f1_macro_cv_mean": 0.2590650078319653
+    },
+    {
+      "horizon": 4,
+      "acc_test": 0.44015324900002495,
+      "f1_macro_test": 0.330455888705998,
+      "acc_cv_mean": 0.3503949330415055,
+      "f1_macro_cv_mean": 0.25530232282220117
+    },
+    {
+      "horizon": 5,
+      "acc_test": 0.4651195765382404,
+      "f1_macro_test": 0.3325367290679062,
+      "acc_cv_mean": 0.36273990998847383,
+      "f1_macro_cv_mean": 0.2660043923785591
+    }
+  ],
+  "operability_summary": [
+    {
+      "horizon": 1,
+      "total_predictions": 4922,
+      "operable_predictions": 1921,
+      "operable_share": 0.3902885006095083,
+      "operable_accuracy": 0.23008849557522124
+    },
+    {
+      "horizon": 2,
+      "total_predictions": 4922,
+      "operable_predictions": 1879,
+      "operable_share": 0.3817553839902479,
+      "operable_accuracy": 0.23469930814262907
+    },
+    {
+      "horizon": 3,
+      "total_predictions": 4922,
+      "operable_predictions": 2013,
+      "operable_share": 0.40898008939455505,
+      "operable_accuracy": 0.21758569299552907
+    },
+    {
+      "horizon": 4,
+      "total_predictions": 4922,
+      "operable_predictions": 2043,
+      "operable_share": 0.41507517269402683,
+      "operable_accuracy": 0.22418012726382772
+    },
+    {
+      "horizon": 5,
+      "total_predictions": 4922,
+      "operable_predictions": 1765,
+      "operable_share": 0.3585940674522552,
+      "operable_accuracy": 0.23342776203966006
+    }
+  ],
+  "files_written": [
+    "direction_classification_metrics.csv",
+    "direction_confusion_overall_h1.csv",
+    "direction_confusion_overall_h2.csv",
+    "direction_confusion_overall_h3.csv",
+    "direction_confusion_overall_h4.csv",
+    "direction_confusion_overall_h5.csv",
+    "direction_confusion_per_company.csv",
+    "direction_preds_h1.csv",
+    "direction_preds_h2.csv",
+    "direction_preds_h3.csv",
+    "direction_preds_h4.csv",
+    "direction_preds_h5.csv",
+    "direction_readme.txt",
+    "feature_importance_summary.csv",
+    "run_summary.json"
+  ]
+}
